@@ -3,15 +3,15 @@ spring:
     name: projetofinal
 
   datasource:
-    url: jdbc:mysql://localhost:3306/projeto
+    url: jdbc:mysql://sql10.freesqldatabase.com:3306/sql10761415
     driverClassName: com.mysql.cj.jdbc.Driver
-    username: root
-    password: admin
+    username: sql10761415
+    password: KlLzkGRWHR
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
 
   sql:
     init:
