@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: projetofinal
+
+  datasource:
+    url: jdbc:${DB_URL}
+    driverClassName: ${DB_DRIVER_CLASS}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  sql:
+    init:
+      mode: never

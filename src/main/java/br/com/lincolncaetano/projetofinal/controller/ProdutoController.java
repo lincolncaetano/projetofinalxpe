@@ -2,7 +2,6 @@ package br.com.lincolncaetano.projetofinal.controller;
 
 import br.com.lincolncaetano.projetofinal.model.Produto;
 import br.com.lincolncaetano.projetofinal.service.ProdutoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,12 +13,16 @@ import java.util.Optional;
 @RequestMapping("/produtos")
 public class ProdutoController {
 
-    @Autowired
-    private ProdutoService service;
+    private final ProdutoService service;
+
+    public ProdutoController(ProdutoService service) {
+        this.service = service;
+    }
 
     @GetMapping
     public ResponseEntity<List<Produto>> listarTodos() {
         List<Produto> produtos = service.listarTodos();
+        System.out.println();
         return new ResponseEntity<>(produtos, HttpStatus.OK);
     }
 

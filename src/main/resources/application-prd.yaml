@@ -3,10 +3,10 @@ spring:
     name: projetofinal
 
   datasource:
-    url: jdbc:mysql://sql10.freesqldatabase.com:3306/sql10761415
+    url: jdbc:${MYSQL_URL}
     driverClassName: com.mysql.cj.jdbc.Driver
-    username: sql10761415
-    password: KlLzkGRWHR
+    username: ${MYSQLUSER}
+    password: ${MYSQLPASSWORD}
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
